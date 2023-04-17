@@ -1,0 +1,35 @@
+%% Custom additions to the preamble
+\ProvidesPackage{preamble}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts,bm,bbm}
+\usepackage[algoruled,linesnumbered]{algorithm2e}
+\usepackage[capitalize,noabbrev]{cleveref}
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Parameters of algorithms
+\SetKwInput{Parameters}{Parameters}
+\newcommand\mycommfont[1]{\scriptsize\ttfamily{#1}}
+\SetCommentSty{mycommfont}
+
+% Macros
+\DeclareMathOperator{\E}{\mathbb{E}}
+\newcommand{\note}[1]{\textcolor{red}{#1}}
